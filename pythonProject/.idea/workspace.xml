@@ -17,6 +17,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -35,6 +38,7 @@
     "Python.Code_Language.executor": "Run",
     "Python.Collection.executor": "Run",
     "Python.Comparator.executor": "Run",
+    "Python.Concatination.executor": "Run",
     "Python.Dictionary.executor": "Run",
     "Python.Exponential.executor": "Run",
     "Python.Function_calci.executor": "Run",
@@ -58,6 +62,7 @@
     "Python.numbers.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/alokj/PycharmProjects/pythonProject",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
