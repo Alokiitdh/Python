@@ -19,6 +19,16 @@ def add_time(t1, t2):
     sum.hour = t1.hour + t2.hour
     sum.minute = t1.minute + t2.minute
     sum.seconds = t1.seconds + t2.seconds
+
+    #removing the problem 
+    '''This function does not deal with the case where the number of seconds or minutes adds up to more than sixty'''
+
+    if sum.seconds >= 60:
+        sum.seconds -= 60
+        sum.minute += 1
+    if sum.minute >= 60:
+        sum.minute -= 60
+        sum.hour += 1
     return sum
 
 done = add_time(start, duration)
