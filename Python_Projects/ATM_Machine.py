@@ -1,8 +1,8 @@
 class Atm:
     #constructor: class ke andar ka code exactly kab execute hota hai jab oska object create hotahai
     def __init__(self):
-        self.pin = ""
-        self.balance = 0
+        self.__pin = ""
+        self.__balance = 0
 
         self.menu()# no need to pass self here 
 
@@ -27,22 +27,22 @@ class Atm:
             else:
                 print('Byeee')   
     def create_pin(self):
-        self.pin = input('Enter Your PIN: ')
+        self.__pin = input('Enter Your PIN: ')
         print('Pin Successfully created')
     def deposit(self):
         temp = input('Enter your Pin: ')
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input('Enter Amount: '))
-            self.balance = self.balance + amount
+            self.__balance = self.__balance + amount
             print('Deposit Successuful')
         else:
             print('Invalid pin')   
     def withdraw(self):
         temp = input('Enter your Pin: ')
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input('Enter Amount: '))
-            if amount < self.balance:
-                self.balance-= amount
+            if amount < self.__balance:
+                self.__balance-= amount
                 print('Operation successful')
             else:
                 print('Transaction Failed: Insufficient FUNDS!!!')
@@ -51,8 +51,8 @@ class Atm:
      
     def check_balance(self):
         temp = input('Enter your Pin: ')
-        if temp == self.pin:
-            print(self.balance)
+        if temp == self.__pin:
+            print(self.__balance)
         else:
             print('invalid Pin')
 
