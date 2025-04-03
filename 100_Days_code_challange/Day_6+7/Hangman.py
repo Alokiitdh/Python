@@ -1,6 +1,11 @@
 import random
 
-word_list = ['machine', 'learning', 'python', 'coding', 'hoolooo', 'potato', 'tomato']
+word_list = [
+    'machine', 'learning', 'python', 'coding', 'hoolooo', 'potato', 'tomato',
+    'coffee', 'bottle', 'pencil', 'window', 'laptop', 'charger', 'mobile', 
+    'kitchen', 'notebook', 'blanket', 'pillow', 'glasses', 'morning', 'evening', 
+    'grocery', 'cabinet', 'holiday', 'charger', 'backpack', 'umbrella', 'headphone'
+]
 
 random_word = random.choice(word_list)
 #print(random_word)
@@ -20,7 +25,7 @@ print(placeholder)
 placeholderlist = list(placeholder)
 
 
-play_chances = len(random_word)+2
+play_chances = len(random_word)+7
 
 
 count =1

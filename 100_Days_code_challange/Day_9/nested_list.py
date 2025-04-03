@@ -5,3 +5,10 @@ student_grades = {
 }
 
 print(student_grades["Alice"][1])  # Output: [85, 90, 88]
+# dict = {
+# #     "a": 1,
+# #     "b": 2,
+# #     "c": 3,
+# # }
+
+# # dict[1]
