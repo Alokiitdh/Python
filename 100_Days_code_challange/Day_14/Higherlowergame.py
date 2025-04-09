@@ -1,14 +1,18 @@
 from Game_data import data
 import random
 
+random_index = random.randint(1,len(data))
+B = data[random_index]
+
 loose = 0
 score = 0
 while(loose != 1):
-    random_index_1 = random.randint(1,len(data))
-    random_index_2 = random.randint(1,len(data))
 
-    A = data[random_index_1]
-    B = data[random_index_2]
+    random_index = random.randint(1,len(data))
+
+    A = B
+    B = data[random_index]
+
 
     print(f'Compare A: {A['name']}, a {A['description']}, from {A['country']}')
     print(f'Compare B: {B['name']}, a {B['description']}, from {B['country']}')
