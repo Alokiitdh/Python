@@ -10,21 +10,34 @@
 
 ## Lets start Coding
 
-PLACEHOLDER = '[name]'
+# PLACEHOLDER = '[name]'
 
-with open(r'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Input\Names\invited_names.txt', mode ='r') as name:
-    names = name.readlines()# read each line and make it in list
+# with open(r'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Input\Names\invited_names.txt', mode ='r') as name:
+#     names = name.readlines()# read each line and make it in list
+#     print(names)
+
+
+# with open(r'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Input\Letters\starting_letter.txt', mode = 'r') as para:
+#     letter_content = para.read() # here i want all content inside letter_content
+#     for name in names:
+#         stripeed_name = name.strip()
+#         new = letter_content.replace(PLACEHOLDER, stripeed_name)
+#         with open(fr'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Output\ReadyToSend\letter_for_{stripeed_name}.text', mode = 'w') as sending:
+#             sending.write(new) 
+
+
+with open(r'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Input\Names\invited_names.txt', mode = 'r') as name:
+    
+    names =name.readlines()
     print(names)
 
-
-with open(r'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Input\Letters\starting_letter.txt', mode = 'r') as para:
-    letter_content = para.read() # here i want all content inside letter_content
+with open(r'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Input\Letters\starting_letter.txt', mode = 'r') as letter:
+    letter_content = letter.read()
     for name in names:
-        stripeed_name = name.strip()
-        new = letter_content.replace(PLACEHOLDER, stripeed_name)
-        with open(fr'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Output\ReadyToSend\letter_for_{stripeed_name}.text', mode = 'w') as sending:
-            sending.write(new) 
-
+        stripped_name = name.strip()
+        letter_to_send = letter_content.replace('[name]', stripped_name)
+        with open(fr'C:\Users\alokj\OneDrive\Documents\GitHub\Python\100_Days_code_challange\Day_24\Mail Merge Project Start\Output\ReadyToSend\letter_for_{stripped_name}.text', mode = 'w') as letter:
+            letter.write(letter_to_send)
 
 
 
